@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+
+<!-- Meta -->
+{% load staticfiles %}
+<title> {% block title %}{% endblock %} </title>
+<link rel="icon" type="image/x-icon" href="{% static 'img/icon.png' %}">
+
+<meta name="description" content="">
+<!-- Theme color for chrome mobile -->
+<meta name="theme-color" content="#">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+<!-- External -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<!-- Local -->
+
+
+{% load pipeline %}
+{% stylesheet 'global' %}
+{% javascript 'ui' %}
+
+{% block head %}   {% endblock %}
+
+</head>
+<body>
+{% block content %}
+
+
+
+{% endblock %}
+{% block tail %}   {% endblock %}
+</body>
+</html>
