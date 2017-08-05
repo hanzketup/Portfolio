@@ -1,7 +1,7 @@
 {% extends 'start/core.html' %}
 
 {% block head %}
-<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,500,700" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
@@ -11,16 +11,21 @@
 
   <a href="#" class="talk-me">
     <img src="{% static 'img/profile.jpg' %}" class="talk-me-img noselect" draggable="false"></img>
-      <h3 class="talk-me-text">Hannes<br>Hermansson</h3>
+      <h3 class="talk-me-title">Hannes<br>Hermansson</h3>
+      <p class="talk-me-text">Short desc about this section of the site, including what will be written in the future</p>
     </a>
 
 <ul class="amenu">
 
 <li class="amenu-item">Latest posts<i class="fa fa-angle-right" aria-hidden="true"></i></li>
-<li class="amenu-item">Ramblings<i class="fa fa-angle-right" aria-hidden="true"></i></li>
-<li class="amenu-item">item<i class="fa fa-angle-right" aria-hidden="true"></i></li>
-<li class="amenu-item">item<i class="fa fa-angle-right" aria-hidden="true"></i></li>
-<li class="amenu-item">item<i class="fa fa-angle-right" aria-hidden="true"></i></li>
+<li class="amenu-item amenu-sub">-  Ramblings<i class="fa fa-angle-right" aria-hidden="true"></i></li>
+<li class="amenu-item amenu-sub">-  Hardware<i class="fa fa-angle-right" aria-hidden="true"></i></li>
+<li class="amenu-item amenu-sub">-  Arduino<i class="fa fa-angle-right" aria-hidden="true"></i></li>
+<li class="amenu-item amenu-sub">-  Ai<i class="fa fa-angle-right" aria-hidden="true"></i></li>
+
+<li class="amenu-item">Projects<i class="fa fa-angle-right" aria-hidden="true"></i></li>
+<li class="amenu-item">About<i class="fa fa-angle-right" aria-hidden="true"></i></li>
+<li class="amenu-item">contact<i class="fa fa-angle-right" aria-hidden="true"></i></li>
 
 </ul>
 

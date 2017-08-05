@@ -16,70 +16,73 @@ aside {
   left: 0;
   background-color: #34495e;
   height: 100%;
-  width: 20rem;
+  width: 14rem;
 }
 
 .talk-me {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 6rem;
-  padding: 0rem 3rem;
+  text-align: center;
+  height: 20rem;
+  padding: 0rem 2rem;
   background-color: #2c3e50;
 }
 
 .talk-me-img {
-  width: 4rem;
+  width: 6rem;
   border-radius: 50%;
 }
 
-.talk-me-text {
-  margin: 0;
-  padding-left: 1rem;
+.talk-me-title {
+  margin: 1rem 0;
   font-size: 1.5rem;
   font-weight: 300;
   color: #ecf0f1;
   font-family: 'Roboto', sans-serif;
 }
 
-.amenu{
-
-display: flex;
-flex-direction: column;
-justify-content: center;
-
-list-style: none;
-
-padding:0;
-margin:0;
-width: 100%;
-
+.talk-me-text {
+  margin: 0;
+  font-weight: 300;
+  color: #ecf0f1;
+  font-family: 'Roboto', sans-serif;
 }
 
-.amenu-item{
+.amenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
 
-display: flex;
-justify-content: space-between;
-align-items: center;
+.amenu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  width: auto;
+  height: 3rem;
+  cursor: pointer;
+  transition: 0.5s ease;
+  border-bottom: 1px solid rgba(44, 62, 80, 0.5);
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: rgba(236, 240, 241, 1.0);
+}
 
-padding:0 2rem;
+.amenu-item:hover {
+  transform: translateX(1rem);
+}
 
-width: auto;
-height: 5rem;
-
-cursor: pointer;
-transition: 0.5s ease;
-
-border-bottom: 1px solid rgba(44, 62, 80,0.5);
-
-font-size: 1.6rem;
-font-weight: 300;
-color:rgba(236, 240, 241,1.0);
-
-}.amenu-item:hover{
-
-transform: translateX(10px);
-
+.amenu-sub {
+  background-color: rgba(44, 62, 80, 1.0);
+  padding-left: 3rem;
 }
 
 
@@ -92,25 +95,27 @@ article {
 
 .article {
   min-height: 150%;
-  margin-left: 20rem;
+  margin-left: 14rem;
 }
 
 .article-title {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(26, 188, 156, 1.0);
-  height: 6rem;
+  background-color: #1abc9c;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='52' height='52' viewBox='0 0 52 52'%3E%3Cpath fill='%2334495e' fill-opacity='0.14' d='M0 17.83V0h17.83a3 3 0 0 1-5.66 2H5.9A5 5 0 0 1 2 5.9v6.27a3 3 0 0 1-2 5.66zm0 18.34a3 3 0 0 1 2 5.66v6.27A5 5 0 0 1 5.9 52h6.27a3 3 0 0 1 5.66 0H0V36.17zM36.17 52a3 3 0 0 1 5.66 0h6.27a5 5 0 0 1 3.9-3.9v-6.27a3 3 0 0 1 0-5.66V52H36.17zM0 31.93v-9.78a5 5 0 0 1 3.8.72l4.43-4.43a3 3 0 1 1 1.42 1.41L5.2 24.28a5 5 0 0 1 0 5.52l4.44 4.43a3 3 0 1 1-1.42 1.42L3.8 31.2a5 5 0 0 1-3.8.72zm52-14.1a3 3 0 0 1 0-5.66V5.9A5 5 0 0 1 48.1 2h-6.27a3 3 0 0 1-5.66-2H52v17.83zm0 14.1a4.97 4.97 0 0 1-1.72-.72l-4.43 4.44a3 3 0 1 1-1.41-1.42l4.43-4.43a5 5 0 0 1 0-5.52l-4.43-4.43a3 3 0 1 1 1.41-1.41l4.43 4.43c.53-.35 1.12-.6 1.72-.72v9.78zM22.15 0h9.78a5 5 0 0 1-.72 3.8l4.44 4.43a3 3 0 1 1-1.42 1.42L29.8 5.2a5 5 0 0 1-5.52 0l-4.43 4.44a3 3 0 1 1-1.41-1.42l4.43-4.43a5 5 0 0 1-.72-3.8zm0 52c.13-.6.37-1.19.72-1.72l-4.43-4.43a3 3 0 1 1 1.41-1.41l4.43 4.43a5 5 0 0 1 5.52 0l4.43-4.43a3 3 0 1 1 1.42 1.41l-4.44 4.43c.36.53.6 1.12.72 1.72h-9.78zm9.75-24a5 5 0 0 1-3.9 3.9v6.27a3 3 0 1 1-2 0V31.9a5 5 0 0 1-3.9-3.9h-6.27a3 3 0 1 1 0-2h6.27a5 5 0 0 1 3.9-3.9v-6.27a3 3 0 1 1 2 0v6.27a5 5 0 0 1 3.9 3.9h6.27a3 3 0 1 1 0 2H31.9z'%3E%3C/path%3E%3C/svg%3E");
+  background-attachment: fixed;
+  height: 20rem;
 }
 
 .article-title h1 {
-  flex: 8;
-  color: rgba(236, 240, 241, 1.0);
+  color: #333;
   text-align: center;
   text-overflow: ellipsis;
   margin: 0;
   padding: 1rem 2rem;
-  font-size: 2.0rem;
+  font-size: 3.2rem;
   font-weight: 300;
 }
 
@@ -120,25 +125,33 @@ article {
   align-items: center;
   flex: 1;
   font-size: 2.0rem;
-  color: rgba(22, 160, 133, 1.0);
+  color: rgba(44, 62, 80, 1.0);
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.4);
 }
 
-.cat, .pub {
-  margin-right: 2rem;
-  padding:0 1rem;
+.meta {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  flex: 1;
+}
+
+.cat, .pub {
+  margin-right: 0rem;
+  padding: 0 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  font-size: 1.2rem;
   text-align: center;
   line-height: 140%;
-  font-weight: 300;
-  color: rgba(236, 240, 241, 1.0);
-  background-color: rgba(22, 160, 133, 1.0);
+  font-weight: 500;
+  color: #333;
 }
 
 .article-block {
-  margin: 4rem;
+  height: 100%;
+  padding: 5rem 15rem;
   font-weight: 300;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
 }
