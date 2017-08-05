@@ -1,0 +1,26 @@
+{% extends 'start/core.html' %}
+
+{% block head %}
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,700" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+{% load staticfiles %}
+<div class="wrap">
+<aside>
+
+  <div class="talk-me">
+    <img src="{% static 'img/profile.jpg' %}" class="talk-me-img noselect" draggable="false"></img>
+      <h3 class="talk-me-text">Hannes<br>Hermansson</h3>
+    </div>
+
+</aside>
+<article>
+{% block article %}
+
+
+
+{% endblock %}
+</article>
+</div>
+{% endblock %}
