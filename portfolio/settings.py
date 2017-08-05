@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'start',
     'talk',
     'photos',
+    'dashboard',
 ]
 
 MIDDLEWARE = [
