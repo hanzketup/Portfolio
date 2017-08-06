@@ -15,9 +15,21 @@ class Post(models.Model):
     title = models.TextField()
     date = models.DateField()
 
+    short = models.TextField()
+
     content = models.TextField()
 
     cat = models.ManyToManyField(Cat)
+
+    def __str__(self):
+        return self.title
+
+class pro(models.Model):
+
+    title = models.TextField()
+    img = models.TextField()
+
+    desc = models.TextField()
 
     def __str__(self):
         return self.title
