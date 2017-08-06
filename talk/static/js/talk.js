@@ -10,6 +10,7 @@ let arr = [
 ];
 let clr = arr[Math.floor(Math.random() * arr.length)];
 $(".article-title").css("background-color", clr);
+$(".fab").css("background-color", clr);
 
 $( ".catsw" ).click(function() {
 

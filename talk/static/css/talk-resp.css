@@ -1,0 +1,8 @@
+
+
+@media screen and (max-width:800px){
+
+aside {display: none !important;}
+.article{margin-left: 0 !important;}
+
+}
