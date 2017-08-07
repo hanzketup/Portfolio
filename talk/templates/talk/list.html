@@ -3,11 +3,11 @@
 {% block title %}{{title}}{% endblock %}
 
 {% block article %}
-<div class="article-title">
+<div class="article-title list-title">
   <h1>{{title}}</h1>
 </div>
 {% for i in posts %}
-<a href="/talk/{{i.pk}}" class="post-list">
+<a href="/words/{{i.pk}}" class="post-list">
 <div class="post-icon"><i class="fa fa-pencil fa-2x" aria-hidden="true"></i></div>
 <div class="post-main">
 <h1 class="post-title">{{i.title}}</h1>

@@ -19,6 +19,6 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^' , include('start.urls')),
-    url(r'^talk/', include('talk.urls')),
+    url(r'^words/', include('talk.urls')),
     url(r'^dash' , include('dashboard.urls'))
 ]

@@ -6,6 +6,8 @@ from django.shortcuts import render
 from models import *
 from funcs import *
 
+#blog views
+
 def list(request):
 
     r = Post.objects.all()
@@ -34,3 +36,11 @@ def resolv(request, pk):
     }
 
     return render(request, 'talk/single.html', snd)
+
+#project views
+
+def listproject(request):
+
+
+
+    return render(request,'talk/projects.html', snd)

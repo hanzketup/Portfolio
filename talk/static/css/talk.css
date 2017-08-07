@@ -234,6 +234,12 @@ box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 
 /* LIST VIEW */
 
+.list-title h1{
+
+padding-top: 0;
+
+}
+
 .post-list{
 
 display: flex;
@@ -288,6 +294,8 @@ padding: 0 4rem 0 0;
 .post-meta{
 
 height:100%;
+
+line-height: 160%;
 
 display: flex;
 justify-content: center;
