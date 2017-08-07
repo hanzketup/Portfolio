@@ -19,10 +19,6 @@ def list(request):
 
     return render(request, 'talk/list.html', snd)
 
-def item(request): #for testing purposes only
-
-    return render(request, 'talk/single.html')
-
 def resolv(request, pk):
 
     r = Post.objects.get(pk=pk)
