@@ -41,6 +41,14 @@ def resolv(request, pk):
 
 def listproject(request):
 
+    r = Pro.objects.all()
 
+    snd = {
+
+        "title": "My Projects",
+        "pro": r,
+        "allcat": getcat(),
+
+    }
 
     return render(request,'talk/projects.html', snd)

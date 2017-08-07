@@ -8,3 +8,4 @@ from . import models
 
 admin.site.register(models.Post)
 admin.site.register(models.Cat)
+admin.site.register(models.Pro)

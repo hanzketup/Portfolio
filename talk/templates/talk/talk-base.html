@@ -1,7 +1,7 @@
 {% extends 'start/core.html' %}
 
 {% block head %}
-<ank href="https://fonts.googleapis.com/css?family=Roboto:100,300,500,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,500,700" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
@@ -17,12 +17,12 @@
 
 <div class="amenu">
 
-<a href="/talk" class="amenu-item">Latest posts<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+<a href="/words" class="amenu-item">Latest posts<i class="fa fa-angle-right" aria-hidden="true"></i></a>
 <a class="amenu-item catsw">Categories<i class="fa fa-angle-right" aria-hidden="true"></i></a>
 {% for i in allcat %}
-<a href="/talk/cat/{{i}}" class="amenu-item amenu-sub">{{i}}<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+<a href="/words/cat/{{i}}" class="amenu-item amenu-sub">{{i}}<i class="fa fa-angle-right" aria-hidden="true"></i></a>
 {% endfor %}
-<a class="amenu-item">Projects<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+<a href="/words/projects" class="amenu-item">Projects<i class="fa fa-angle-right" aria-hidden="true"></i></a>
 <a class="amenu-item">About<i class="fa fa-angle-right" aria-hidden="true"></i></a>
 <a class="amenu-item">contact<i class="fa fa-angle-right" aria-hidden="true"></i></a>
 

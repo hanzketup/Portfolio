@@ -24,10 +24,12 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
-class pro(models.Model):
+class Pro(models.Model):
 
-    title = models.TextField()
-    img = models.TextField()
+    title = models.CharField(max_length=150)
+    img = models.CharField(max_length=500)
+
+    link = models.CharField(max_length=500)
 
     desc = models.TextField()
 

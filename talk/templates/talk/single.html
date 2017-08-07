@@ -5,11 +5,9 @@
 
 {% block article %}
 
-<div class="article">
-
 <div class="article-title">
 
-<a><i class="fa fa-chevron-left back" aria-hidden="true"></i></a>
+<a onclick="window.history.back();"><i class="fa fa-chevron-left back" aria-hidden="true"></i></a>
 
 <h1>{{title}}</h1>
 
@@ -22,8 +20,6 @@
 
 <div class="article-block">
   {{ content|safe }}
-</div>
-
 </div>
 
 {% endblock %}

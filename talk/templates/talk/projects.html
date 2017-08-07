@@ -1,0 +1,22 @@
+{% extends 'talk/talk-base.html' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block article %}
+<div class="article-title list-title">
+  <h1>{{title}}</h1>
+</div>
+<div class="pro-wrap">
+{% for i in pro %}
+
+<a href="" class="prosqr">
+<div class="prosqr-wrap">
+<img src="{{i.img}}" class="prosqr-img" alt="project screenshot" />
+<h2 class="prosqr-title">{{i.title}}</h2>
+</div>
+</a>
+
+{% endfor %}
+</div>
+
+{% endblock %}
