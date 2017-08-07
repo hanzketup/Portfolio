@@ -12,7 +12,7 @@ class Cat(models.Model):
 
 class Post(models.Model):
 
-    title = models.TextField()
+    title = models.CharField(max_length=150)
     date = models.DateField()
 
     short = models.TextField()

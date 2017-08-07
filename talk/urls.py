@@ -5,4 +5,5 @@ from . import views
 urlpatterns = [
     url('^$', views.list),
     url('^item', views.item),
+    url('(?P<pk>\d+)/$', views.resolv),
 ]

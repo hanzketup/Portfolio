@@ -1,5 +1,23 @@
 {% extends 'talk/talk-base.html' %}
 
+{% block title %}{{title}}{% endblock %}
+
 {% block article %}
+<div class="article-title">
+  <h1>{{title}}</h1>
+</div>
+{% for i in posts %}
+<a href="/talk/{{i.pk}}" class="post-list">
+<div class="post-main">
+<h1 class="post-title">{{i.title}}</h1>
+<p class="post-short">{{i.short}}</p>
+</div>
+<div class="post-meta">
+<p>Published On:<br>{{i.date}}</p>
+<p>In Category:<br>{{i.cat.all.0}}</p>
+</div>
+</a>
+{% endfor %}
+
 
 {% endblock %}

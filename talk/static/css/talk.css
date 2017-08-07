@@ -5,7 +5,7 @@
   justify-content: space-between;
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
-  color: #555f61;
+  color: #333;
 }
 
 
@@ -52,6 +52,7 @@ aside {
 }
 
 .talk-me-text {
+  font-size:0.8rem;
   margin: 0;
   font-weight: 300;
   color: #ecf0f1;
@@ -84,20 +85,21 @@ aside {
   cursor: pointer;
   transition: 0.3s ease;
   border-bottom: 1px solid rgba(44, 62, 80, 0.5);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 300;
   color: rgba(236, 240, 241, 1.0);
 }
 
 .amenu-item:hover {
   transform: translateX(0.5rem);
+  color: rgba(236, 240, 241, 1.0);
 }
 
 .amenu-sub {
   display: none;
   transition: 0.4s;
   background-color: rgba(44, 62, 80, 1.0);
-  padding-left: 3rem;
+  padding-left: 4rem;
 }
 
 .amenu-bot{
@@ -126,14 +128,16 @@ color:#ecf0f1;
 article {
   height: 100%;
   width: 100%;
-}
-
-.article {
   min-height: 150%;
   margin-left: 14rem;
 }
 
+.article {
+
+}
+
 .article-title {
+
 
   position: relative;
   display: flex;
@@ -156,8 +160,11 @@ article {
   text-overflow: ellipsis;
   margin: 0;
   padding: 1rem 2rem;
+  padding-top: 3rem;
   font-size: 3.2rem;
   font-weight: 300;
+  color:#ecf0f1;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .back {
@@ -170,6 +177,7 @@ article {
   justify-content: center;
   align-items: center;
 
+  color:#333;
   font-size: 1.5rem;
 
 }
@@ -178,11 +186,13 @@ article {
   display: flex;
   justify-content: center;
   align-items: center;
+  color:#ecf0f1;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .cat, .pub {
   margin-right: 0rem;
-  padding: 0 4rem;
+  padding:0 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -191,7 +201,6 @@ article {
   text-align: center;
   line-height: 140%;
   font-weight: 300;
-  color: #333;
 }
 
 .fab{
@@ -200,12 +209,14 @@ position: fixed;
 bottom: 5%;
 right: 5%;
 
-display: flex;
+display: none;
 justify-content: center;
 align-items: center;
 
 height: 2rem;
 width: 2rem;
+
+font-size: 0.8rem;
 
 padding: 0.8rem;
 border-radius: 50%;
@@ -219,4 +230,68 @@ box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   padding: 5rem 15rem;
   font-weight: 300;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* LIST VIEW */
+
+.post-list{
+
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+min-height: 10rem;
+
+
+color:#333;
+
+padding: 0 0 0 10%;
+border-bottom: 1px solid rgba(52, 73, 94,0.2);
+
+}.post-list *{height: 100%;}
+
+.post-main{
+
+
+}
+
+.post-title{
+
+font-weight: 300;
+
+}
+
+.post-title{
+
+
+
+}
+
+.post-meta{
+
+height:100%;
+
+display: flex;
+justify-content: center;
+
+}.post-meta p{
+
+display: flex;
+align-items: center;
+
+text-align: center;
+
+height:100%;
+
+border-right:1px solid rgba(52, 73, 94,0.2);
+
+margin:0;
+padding: 0 2rem;
+
+}
+
+.post-meta p:first-child{
+
+border-left:1px solid rgba(52, 73, 94,0.2);
+
 }
