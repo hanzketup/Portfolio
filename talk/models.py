@@ -29,7 +29,10 @@ class Pro(models.Model):
     title = models.CharField(max_length=150)
     img = models.CharField(max_length=500)
 
-    link = models.CharField(max_length=500)
+    isexp = models.BooleanField()
+
+    link = models.CharField(max_length=500, blank=True)
+    art = models.CharField(max_length=500, blank=True,)
 
     desc = models.TextField()
 

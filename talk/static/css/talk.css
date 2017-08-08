@@ -81,7 +81,7 @@ aside {
   border-bottom: 1px solid rgba(44, 62, 80, 0.5);
   font-size: 1.1rem;
   font-weight: 300;
-  color: rgba(236, 240, 241, 1.0);
+  color:white !important;
 }
 
 .amenu-item:hover {
@@ -180,8 +180,8 @@ article {
 
 .fab {
   position: fixed;
-  bottom: 5%;
-  right: 5%;
+  bottom: 2vh;
+  right: 2vw;
   display: none;
   justify-content: center;
   align-items: center;
@@ -312,9 +312,12 @@ article {
   height: 12rem;
   width: 12rem;
   padding: 0.5rem;
-  background-color: rgba(236, 240, 241, 1.0);
+  margin: 0.5rem;
+  background-color: rgba(236, 240, 241, 0.5);
   border-radius: 50%;
-}
+  transition: 0.2s ease;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}.prosqr-img:hover{background-color: rgba(236, 240, 241, 1.0);}
 
 .prosqr-title {
   font-weight: 300;
@@ -332,9 +335,7 @@ article {
 /* project overlay */
 
 .pro-overlay {
-
   display: none;
-
   position: fixed;
   top: 0;
   bottom: 0;
@@ -343,15 +344,12 @@ article {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-.pro-overlay-wrap{
-
-height: 100%;
-width: 100%;
-
-display: flex;
-justify-content: center;
-align-items: center;
-
+.pro-overlay-wrap {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .pro-overlay-box {
@@ -361,81 +359,81 @@ align-items: center;
   background-color: white;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   z-index: 1500;
-
   text-align: center;
-
   display: flex;
-  justify-content:space-around;
+  flex-wrap: wrap;
+  justify-content: space-around;
   align-items: center;
-
 }
 
-.pro-overlay-x{
-
-position: absolute;
-top:2%;
-right: 1%;
-font-size: 1.8rem;
-color: rgba(231, 76, 60,0.8);
-cursor: pointer;
-
-}.pro-overlay-x:hover{color: rgba(231, 76, 60,1.0);}
-
-.pro-overlay-side{
-
-display: flex;
-flex-direction: column;
-justify-content: space-around;
-align-items: center;
-
-padding: 1rem;
-
+.pro-overlay-x {
+  position: absolute;
+  top: 4vh;
+  right: 4vh;
+  font-size: 1.8rem;
+  color: rgba(231, 76, 60, 0.8);
+  cursor: pointer;
 }
 
-.pro-overlay-img{
-  height:15rem;
-  width: 15rem;
+.pro-overlay-x:hover {
+  color: rgba(231, 76, 60, 1.0);
+}
+
+.pro-overlay-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+}
+
+.pro-overlay-img {
+  height:25vw;
+  width: 25vw;
   border-radius: 50%;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
-.pro-overlay-btn{
+.pro-overlay-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
-text-align: center;
-
-padding: 1rem 1.5rem;
-margin:0.5rem 2rem;
-border-radius: 5px;
-font-weight: 300;
+.pro-overlay-btn {
+  text-align: center;
+  padding: 1.0rem 2rem;
+  margin: 0.5rem 2rem;
+  border-radius: 3px;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: white;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  transition: 0.4s ease;
+}.pro-overlay-btn:hover{
 color:white;
-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-
+transform: translateY(-2px);
 }
 
-.pro-overlay-main{
-
-display: flex;
-flex-direction: column;
-justify-content: space-around;
-align-items: center;
-
+.pro-overlay-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.pro-overlay-title{
-
-margin: 0;
-font-weight: 300;
-
+.pro-overlay-title {
+  margin: 0;
+  font-weight: 300;
 }
 
-.pro-overlay-desc{
-
-width: 30rem;
-font-weight: 300;
-margin: 0;
-padding: 2rem 1rem;
-
+.pro-overlay-desc {
+  width: 35vw;
+  font-weight: 300;
+  margin: 0;
+  padding: 2rem 1rem;
 }
+
 
 /* responsive */
 
@@ -498,6 +496,13 @@ padding: 2rem 1rem;
   .pro-overlay {
     left: 0;
   }
+
+  .pro-overlay-desc {
+    font-size: 15px;
+    padding: 1rem;
+    width: 100%;
+  }
+
 }
 
 @media screen and (max-width:400px) {
