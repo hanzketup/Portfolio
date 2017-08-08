@@ -284,12 +284,13 @@ article {
 /* Project listing */
 
 .pro-wrap {
-  color:#333;
-  margin:5rem 10%;
+  color: #333;
+  margin: 5rem 10%;
   padding: 2%;
   border-radius: 2px;
   background-color: white;
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
@@ -301,7 +302,6 @@ article {
   text-align: center;
   width: 16rem;
   height: 20rem;
-
 }
 
 .prosqr-wrap {
@@ -311,6 +311,8 @@ article {
 .prosqr-img {
   height: 12rem;
   width: 12rem;
+  padding: 0.5rem;
+  background-color: rgba(236, 240, 241, 1.0);
   border-radius: 50%;
 }
 
@@ -326,6 +328,112 @@ article {
   margin: 0;
 }
 
+
+/* project overlay */
+
+.pro-overlay {
+
+  display: none;
+
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 14rem;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.pro-overlay-wrap{
+
+height: 100%;
+width: 100%;
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.pro-overlay-box {
+  position: relative;
+  border-radius: 4px;
+  padding: 2rem;
+  background-color: white;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 1500;
+
+  text-align: center;
+
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+
+}
+
+.pro-overlay-x{
+
+position: absolute;
+top:6%;
+right: 2%;
+
+color:#333;
+
+}
+
+.pro-overlay-side{
+
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+
+padding: 2rem;
+
+}
+
+.pro-overlay-img{
+  height:15rem;
+  width: 15rem;
+  border-radius: 50%;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.pro-overlay-btn{
+
+text-align: center;
+
+padding: 1rem 1.5rem;
+margin:0.5rem 2rem;
+border-radius: 5px;
+font-weight: 300;
+color:white;
+background-color: rgba(26, 188, 156,1.0);
+box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+
+}
+
+.pro-overlay-main{
+
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+
+}
+
+.pro-overlay-title{
+
+font-weight: 300;
+
+}
+
+.pro-overlay-desc{
+
+width: 40rem;
+font-weight: 300;
+padding: 2rem 5rem;
+
+}
 
 /* responsive */
 
@@ -384,6 +492,9 @@ article {
   .post-meta p:first-child {
     border-left: 0px;
     border-right: 1px solid rgba(52, 73, 94, 0.2);
+  }
+  .pro-overlay {
+    left: 0;
   }
 }
 

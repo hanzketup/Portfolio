@@ -3,13 +3,35 @@
 {% block title %}{{title}}{% endblock %}
 
 {% block article %}
+
 <div class="article-title list-title">
   <h1>{{title}}</h1>
+</div>
+<div class="pro-overlay">
+  <div class="pro-overlay-wrap">
+  <div class="pro-overlay-box">
+    <i class="fa fa-times fa-2x pro-overlay-x" aria-hidden="true"></i>
+
+    <div class="pro-overlay-side">
+    <img class="pro-overlay-img" alt="overlay project screenshot" />
+    </div>
+
+    <div class="pro-overlay-main">
+    <h2 class="pro-overlay-title"></h2>
+    <p class="pro-overlay-desc"><p>
+    <div class="pro-overlay-row">
+      <a href="" class="pro-overlay-btn">Go!</a>
+      <a href="" class="pro-overlay-btn">Read more...</a>
+    </div>
+    </div>
+
+  </div>
+</div>
 </div>
 <div class="pro-wrap">
 {% for i in pro %}
 
-<a href="" class="prosqr">
+<a href="#{{i.pk}}" class="prosqr" id="{{i.pk}}" data-title="{{i.title}}" data-img="{{i.img}}" data-desc="{{i.desc}}" data-link="{{i.link}}" data-art="{{i.art}}">
 <div class="prosqr-wrap">
 <img src="{{i.img}}" class="prosqr-img" alt="project screenshot" />
 <h2 class="prosqr-title">{{i.title}}</h2>

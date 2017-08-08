@@ -47,5 +47,28 @@ window.onload = function() {
     }
   });
 
+//project section
+
+$('.prosqr').on('click', function(){
+setTimeout(function(){
+
+let ovr = $(window.location.hash);
+
+$(".pro-overlay-img").attr("src", ovr.data('img'));
+$(".pro-overlay-title").text(ovr.data('title'));
+$(".pro-overlay-desc").text(ovr.data('desc'));
+
+$('.pro-overlay').show(0);
+console.log('dab');
+},25);
+
+});
+
+$('.pro-overlay-x').on('click',function() {
+  $('.pro-overlay').hide();
+})
+
+
+
 
 }
