@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
+from django.http import Http404
 
 from models import *
 from funcs import *
@@ -66,3 +67,20 @@ def listexp(request):
     }
 
     return render(request,'talk/projects.html', snd)
+
+def catlist(request, cat):
+
+    q = Cat.objects.filter(title=cat)
+
+    if len(q) == 0:
+        raise Http404
+
+    else:
+        r = Post.objects.filter(cat=q[0].pk)
+        snd = {
+            "posts": r,
+            "title": cat,
+            "allcat": getcat(),
+        }
+
+        return render(request, 'talk/list.html', snd)
