@@ -1,0 +1,26 @@
+{% extends 'talk/talk-base.html' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block article %}
+
+<div class="pho-overlay">
+  <div class="pho-overlay-wrap">
+    <div id="phower" class="pho-overlay-box">
+      <img class="pho-overlay-img" src="" alt="Large overlay image" />
+    </div>
+  </div>
+</div>
+
+<div class="article-title list-title">
+  <h1>{{title}}</h1>
+  <p>{{title_desc}}</p>
+</div>
+
+<div class="img-list">
+{% for i in imgs %}
+{{i|safe}}
+{% endfor %}
+</div>
+
+{% endblock %}
