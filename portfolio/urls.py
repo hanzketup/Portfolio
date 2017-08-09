@@ -20,5 +20,4 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^' , include('start.urls')),
     url(r'^words/', include('talk.urls')),
-    url(r'^dash' , include('dashboard.urls'))
 ]
