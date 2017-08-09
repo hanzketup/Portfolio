@@ -1,5 +1,8 @@
 {% extends "start/core.html" %}
 {% load staticfiles %}
+
+{% block title %}Start{% endblock %}
+
 {% block head %}
 <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 
@@ -10,45 +13,6 @@
       responsiveWidth: 550
     });
   });
-
-
-  function email() {
-
-    var h4 = document.getElementById("email-address");
-    var eav = document.getElementById("email").contains(h4);
-
-    if ($('#email').css('opacity') == 0 && eav == false) {
-      var e = document.createElement('h4');
-      e.setAttribute("id", "email-address");
-      e.innerHTML = 'Me@HannesHermansson.com';
-      document.getElementById('email').appendChild(e);
-      document.getElementById("email").style.opacity = "1";
-      $('#email')[0].scrollIntoView({
-        block: "end",
-        behavior: "smooth"
-      });
-    } else {
-      e = document.getElementById('email-address')
-      document.getElementById('email').removeChild(e);
-      document.getElementById("email").style.opacity = "0";
-    }
-  }
-</script>
-<script>
-  (function(i, s, o, g, r, a, m) {
-    i['GoogleAnalyticsObject'] = r;
-    i[r] = i[r] || function() {
-      (i[r].q = i[r].q || []).push(arguments)
-    }, i[r].l = 1 * new Date();
-    a = s.createElement(o),
-      m = s.getElementsByTagName(o)[0];
-    a.async = 1;
-    a.src = g;
-    m.parentNode.insertBefore(a, m)
-  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-  ga('create', 'UA-65091007-1', 'auto');
-  ga('send', 'pageview');
 </script>
 
 {% endblock %}
@@ -66,7 +30,7 @@
               <h3>Hannes Hermansson</h3>
               <small>Maker / Programmer</small>
               <p>
-                I am a 16 year old high school student from Sweden.<br> Spent most of my free time playing around with microcontrollers and digging around in code.
+                I am a 17 year old high school student from Sweden.<br> Spent most of my free time playing around with microcontrollers and digging around in code.
               </p>
             </div>
 
@@ -183,12 +147,7 @@
                 </span>
 
             </div>
-            <div class="email" id="email">
-
-            </div>
           </div>
-
-          <small class="footnote">&copy; Hannes Hermanssson <br>.Background patterns by <a href="http://www.heropatterns.com/"style="cursor:pointer;">Steve Schoger</a></small>
         </div>
       </div>
     </div>
