@@ -5,7 +5,12 @@ from django.shortcuts import render
 from django.http import Http404
 
 from models import *
-from funcs import *
+
+def getcat():
+    r = Cat.objects.all()
+    r = list(r)
+    return r
+
 
 #blog views
 

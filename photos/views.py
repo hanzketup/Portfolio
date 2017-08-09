@@ -5,6 +5,11 @@ from django.shortcuts import render
 import requests
 import random
 
+def getcat():
+    r = Cat.objects.all()
+    r = list(r)
+    return r
+
 def getimg(request):
 
     req = requests.get("https://api.imgur.com/3/album/CkXDK/images", headers={"authorization":"Client-ID 8820eceaafeee84"})
