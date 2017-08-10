@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 from django.shortcuts import render
 import requests
 import random
+from talk.models import Cat
 
 def getcat():
     r = Cat.objects.all()
@@ -21,8 +22,9 @@ def getimg(request):
 
     for i in reqd:
         li = i["link"]
+        lih = li[:-4] + 'h' + li[-4:] #imgur thumbnail extract
         lim = li[:-4] + 'm' + li[-4:] #imgur thumbnail extract
-        imgs.append('<img src="{}" class="pho" data-link="{}" />'.format(lim, li))
+        imgs.append('<img src="{}" class="pho" data-link="{}" />'.format(lim, lih))
 
 
     snd = {

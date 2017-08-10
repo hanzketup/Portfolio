@@ -11,7 +11,6 @@ def getcat():
     r = list(r)
     return r
 
-
 #blog views
 
 def list(request):
