@@ -63,7 +63,11 @@ window.onload = function() {
       $(".pro-overlay-img").attr("src", ovr.data('img'));
       $(".pro-overlay-title").text(ovr.data('title'));
       $(".pro-overlay-desc").text(ovr.data('desc'));
-      $(".pro-overlay-btn-link").attr("href", ovr.data('link'));
+      if(ovr.data('link') != ""){$(".pro-overlay-btn-link").attr("href", ovr.data('link'));$(".pro-overlay-btn-link").show();}
+      else{$(".pro-overlay-btn-link").hide();}
+
+      if(ovr.data('art') != ""){$(".pro-overlay-btn-more").attr("href", ovr.data('art'));$(".pro-overlay-btn-more").show();}
+      else{$(".pro-overlay-btn-more").hide();}
 
       $('.pro-overlay').show(0);
     }, 25);

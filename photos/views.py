@@ -7,9 +7,7 @@ import random
 from talk.models import Cat
 
 def getcat():
-    r = Cat.objects.all()
-    r = list(r)
-    return r
+    return Cat.objects.all()
 
 def getimg(request):
 

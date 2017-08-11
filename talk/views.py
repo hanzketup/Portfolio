@@ -7,9 +7,7 @@ from django.http import Http404
 from models import *
 
 def getcat():
-    r = Cat.objects.all()
-    r = list(r)
-    return r
+    return Cat.objects.all()
 
 #blog views
 

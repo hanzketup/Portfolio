@@ -113,7 +113,6 @@ aside {
 /*ARTICLE*/
 
 article {
-  overflow-y: scroll;
   width: 100%;
   min-height: 100vh;
   margin-left: 14rem;
@@ -332,7 +331,10 @@ font-weight: 500;
 }.prosqr-img:hover{background-color: rgba(236, 240, 241, 1.0);}
 
 .prosqr-title {
-  font-weight: 300;
+  margin:0.5rem 0;
+  color:#6C7A89;
+  font-weight: 500;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .prosqr-short {
