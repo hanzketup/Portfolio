@@ -44,11 +44,12 @@ def resolv(request, pk):
 
 def listproject(request):
 
-    r = Pro.objects.filter(isexp=False)
+    r = Pro.objects.filter(isexp=False)[::-1]
 
     snd = {
 
         "title": "My Projects",
+        "title_desc": "Some of my recent personal projects. Click on the circles to get more info.",
         "pro": r,
         "allcat": getcat(),
 
@@ -58,11 +59,12 @@ def listproject(request):
 
 def listexp(request):
 
-    r = Pro.objects.filter(isexp=True)
+    r = Pro.objects.filter(isexp=True)[::-1]
 
     snd = {
 
         "title": "Experiments",
+        "title_desc": "These are some of my projects that are still in the experimental state.",
         "pro": r,
         "allcat": getcat(),
 

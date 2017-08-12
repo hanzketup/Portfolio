@@ -21,4 +21,7 @@ urlpatterns = [
     url(r'^' , include('start.urls')),
     url(r'^words/', include('talk.urls')),
     url(r'^photos/', include('photos.urls')),
+
+    (r'^tinymce/', include('tinymce.urls')),
+
 ]

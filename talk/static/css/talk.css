@@ -327,7 +327,6 @@ font-weight: 500;
   background-color: rgba(236, 240, 241, 0.5);
   border-radius: 50%;
   transition: 0.2s ease;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }.prosqr-img:hover{background-color: rgba(236, 240, 241, 1.0);}
 
 .prosqr-title {
@@ -369,7 +368,7 @@ font-weight: 500;
 .pro-overlay-box {
   position: relative;
   border-radius: 4px;
-  padding: 2rem;
+  padding: 1.8rem;
   background-color: white;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   z-index: 1500;
@@ -402,8 +401,7 @@ font-weight: 500;
 }
 
 .pro-overlay-img {
-  height:20vw;
-  width: 20vw;
+  width: 15vw;
   border-radius: 50%;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
