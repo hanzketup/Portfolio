@@ -22,6 +22,4 @@ urlpatterns = [
     url(r'^words/', include('talk.urls')),
     url(r'^photos/', include('photos.urls')),
 
-    (r'^tinymce/', include('tinymce.urls')),
-
 ]

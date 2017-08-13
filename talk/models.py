@@ -17,7 +17,7 @@ class Post(models.Model):
 
     short = models.TextField()
 
-    content = tinymce_models.HTMLField()
+    content = models.TextField()
 
     cat = models.ManyToManyField(Cat)
 

@@ -1,11 +1,7 @@
-{% extends "start/core.html" %}
-{% load staticfiles %}
-
-{% block title %}Start{% endblock %}
-
-{% block head %}
+{% extends "start/core.html" %} {% load staticfiles %} {% block title %}Start{% endblock %} {% block head %}
 <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,500,700" rel="stylesheet">
 
 <script>
   $(document).ready(function() {
@@ -16,140 +12,125 @@
   });
 </script>
 
-{% endblock %}
-{% block content %}
+{% endblock %} {% block content %}
 
-  <div id="fullpage">
-    <div class="section section01">
-      <div class="section01-content flexy">
-        <div class="section01-content-box boxy-small">
-          <div class="me">
+<div id="fullpage">
+  <div class="section section01">
+    <div class="section01-content flexy">
+      <div class="section01-content-box boxy-small">
+        <div class="me">
 
-            <img src="{% static 'img/profile.jpg' %}" class="me-img noselect" draggable="false"></img>
+          <img src="{% static 'img/profile.jpg' %}" class="me-img noselect" draggable="false"></img>
 
-            <div class="me-text">
-              <h3>Hannes Hermansson</h3>
-              <small>Maker / Programmer</small>
-              <p>
-                I am a 17 year old high school student from Sweden.<br> Spent most of my free time playing around with microcontrollers and digging around in code.
-              </p>
-            </div>
-
-          </div>
-        </div>
-        <div class="section01-content-box boxy">
-          <div class="hero">
-            <div class="hero-block">
-              <p class="hero-hey noselect">Hey</p>
-              <p class="hero-dot01 hero-dot noselect">.</p>
-              <p class="hero-dot02 hero-dot noselect">.</p>
-              <p class="hero-dot03 hero-dot noselect">!</p>
-            </div>
-
-            <div class="hero-c2a">
-
-              <h2 class="noselect">Scroll down!</h2>
-              <a href="#first"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="section section02">
-      <div class="section02-content flexy">
-        <div class="section02-content-box boxy">
-          <div class="boxy-content">
-            <h1 class="content-headline">Tinkerer</h1>
-            <h1 class="content-dot hero-dot01">.</h1>
-            <p class="section-intro">
-              I have always loved taking things apart and figure out how they work. Early on I taught myself the basics of electronics and started experimenting with basic circuits and micro-controllers. I later advanced to building 3D-printers and drones and other
-              cool/useless stuff!
-              <br><br>I have some of my projects up on instructables.<br> Click below to check it out!
+          <div class="me-text">
+            <h3>Hannes Hermansson</h3>
+            <small>Maker / Programmer</small>
+            <p>
+              I am a 17 year programmer and tinkerer who love anything to do with web development, AI/Machine learning and IoT.
             </p>
-            <a href="https://www.instructables.com/member/HasseB/" target="_blank"><img src="{% static 'img/section01.jpg' %}" class="section-c2a noselect" draggable="false"></img></a>
+          </div>
+
+        </div>
+      </div>
+      <div class="section01-content-box boxy">
+        <div class="hero">
+
+
+          <div class="hero-list">
+            {% for i in posts %}
+            <a href="words/{{i.pk}}" class="prosqr">
+              <div class="prosqr-wrap">
+                <div class="cirfill"><i class="fa fa-paragraph fa-3x ciricon" aria-hidden="true"></i></div>
+                <h2 class="prosqr-title">{{i.title}}</h2>
+              </div>
+            </a>
+            {% endfor %}
+          </div>
+
+          <div class="hero-list">
+            {% for i in pros %}
+            <a href="words/projects#{{i.pk}}" class="prosqr">
+              <div class="prosqr-wrap">
+                <img src="{{i.img}}" class="prosqr-img" alt="project screenshot" />
+                <h2 class="prosqr-title">{{i.title}}</h2>
+              </div>
+            </a>
+            {% endfor %}
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section section02">
+    <div class="section02-content flexy">
+      <div class="section02-content-box boxy">
+        <div class="boxy-content">
+          <h1 class="content-headline">Tinkerer</h1>
+          <h1 class="content-dot hero-dot01">.</h1>
+          <p class="section-intro">
+            I have always loved taking things apart and figure out how they work. Early on I taught myself the basics of electronics and started experimenting with basic circuits and micro-controllers. I later advanced to building 3D-printers and drones and other
+            cool/useless stuff!
+            <br><br>I have some of my projects up on instructables.<br> Click below to check it out!
+          </p>
+          <a href="https://www.instructables.com/member/HasseB/" target="_blank"><img src="{% static 'img/section01.jpg' %}" class="section-c2a noselect" draggable="false"></img></a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section section03">
+    <div class="section03-content flexy">
+      <div class="section03-content-box boxy">
+        <div class="boxy-content">
+          <h1 class="content-headline">Programmer</h1>
+          <h1 class="content-dot hero-dot02">.</h1>
+          <p class="section-intro">
+            I was introduced to programming trough arduino and c++ was my first language. I later 'advanced' to Python and JavaScript among others. My interests within programming lies in web apps and machine learning with python as my language of choice.
+            <br><br>Some of my projects can be found on my github below!
+          </p>
+          <a href="https://github.com/hanzketup" target="_blank"><i class="fa fa-github fa-5x section-icon section-git" aria-hidden="true" title="My (so far) inactive github profile"></i></a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section section04">
+    <div class="section04-content flexy">
+      <div class="section04-content-box boxy">
+        <div class="boxy-content">
+          <h1 class="content-headline">Photographer</h1>
+          <h1 class="content-dot hero-dot03">.</h1>
+          <p class="section-intro">
+            I have always loved photography and being able to capture something the eye can't. I like taking pictures with character and do alot of macro and landscape photgraphy when i get the chance.
+            <br>I have a selection of my pictures below:
+          </p>
+          <a href="/photos"><i class="fa fa-picture-o fa-5x section-icon section-camera" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section section05">
+    <div class="section05-content flexy">
+      <div class="section05-content-box boxy">
+        <div class="boxy-content">
+          <h1 class="content-headline">The end</h1>
+          <h1 class="content-dot  hero-dot01 footer-dot">.</h1>
+          <div class="footer-menu">
+
+
 
           </div>
         </div>
       </div>
     </div>
-
-
-    <div class="section section03">
-      <div class="section03-content flexy">
-        <div class="section03-content-box boxy">
-          <div class="boxy-content">
-            <h1 class="content-headline">Programmer</h1>
-            <h1 class="content-dot hero-dot02">.</h1>
-            <p class="section-intro">
-              I was introduced to programming trough arduino and c++ was my first language. I later 'advanced' to Python and JavaScript among others. My interests within programming lies in web apps and machine learning with python as my language of choice.
-              <br><br>Some of my projects can be found on my github below!
-            </p>
-            <a href="https://github.com/hanzketup" target="_blank"><i class="fa fa-github fa-5x section-icon section-git" aria-hidden="true" title="My (so far) inactive github profile"></i></a>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="section section04">
-      <div class="section04-content flexy">
-        <div class="section04-content-box boxy">
-          <div class="boxy-content">
-            <h1 class="content-headline">Photographer</h1>
-            <h1 class="content-dot hero-dot03">.</h1>
-            <p class="section-intro">
-              I have always loved photography and being able to capture something the eye can't. I like taking pictures with character and do alot of macro and landscape photgraphy when i get the chance.
-              <br>I have a selection of my pictures below:
-            </p>
-            <i class="fa fa-picture-o fa-5x section-icon section-camera" aria-hidden="true" title="Comming soon!" style="cursor:not-allowed;"></i>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="section section05">
-      <div class="section05-content flexy">
-        <div class="section05-content-box boxy">
-          <div class="boxy-content">
-            <h1 class="content-headline">The end</h1>
-            <h1 class="content-dot  hero-dot01 footer-dot">.</h1>
-            <div class="footer-menu">
-
-              <span class="footer-item">
-                    <a href="javascript:;" onclick="email()">
-
-                      <i class="fa fa-paper-plane-o fa-5x footer-icon footer-icon01" aria-hidden="true" title="Contact me!"></i>
-                      <h3 class="footer-item-title footer-icon01">Contact me!</h3>
-
-                    </a>
-                  </span>
-
-              <span class="footer-item">
-                    <a href="https://github.com/hanzketup" target="_blank">
-
-                      <i class="fa fa-github fa-5x footer-icon footer-icon02" aria-hidden="true" title="My (so far) inactive github profile"></i>
-                      <h3 class="footer-item-title footer-icon02">Checkout my github!</h3>
-
-                    </a>
-                  </span>
-
-              <span class="footer-item">
-                    <a href="#intro">
-
-                  <i class="fa fa-repeat fa-5x footer-icon footer-icon03" aria-hidden="true" title="Go again!"></i>
-                  <h3 class="footer-item-title footer-icon03">Go again!</h3>
-
-                  </a>
-                </span>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-{% endblock %}
+  </div>
+  {% endblock %}

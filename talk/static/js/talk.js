@@ -1,13 +1,16 @@
-window.onload = function() {
-  let arr = [
+$(document).ready(function() {
+
+  var clrarr = [
     "#f1c40f", //yellow
     "#1abc9c", //turq
     "#3498db", //blue
     "#27ae60", //green
     "#e74c3c", //red
-    "#9b59b6" //purple
+    "#9b59b6", //purple
+    "#795548", //brown
   ];
-  let clr = arr[Math.floor(Math.random() * arr.length)];
+
+  let clr = clrarr[Math.floor(Math.random() * clrarr.length)];
 
   let reclr = [
     $(".article-title"),
@@ -84,4 +87,4 @@ window.onload = function() {
     }
   });
 
-} //end onload
+}); //end onload
