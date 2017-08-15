@@ -7,8 +7,8 @@ from talk.models import Post, Pro
 
 def index(request):
 
-    posts = Post.objects.all()[:3]
-    pros = Pro.objects.all()[:3]
+    posts = Post.objects.all()
+    pros = Pro.objects.all()
 
 
     snd = {

@@ -8,6 +8,15 @@
   color: #333;
 }
 
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+
 
 /* SIDEBAR */
 
@@ -38,7 +47,7 @@ aside {
 .talk-me-top{
 
 width: 100%;
-padding: 0.4rem 0;
+padding: 0.5rem 1rem;
 display: flex;
 justify-content: space-around;
 align-items: center;
@@ -53,7 +62,7 @@ align-items: center;
 .talk-me-title {
   text-align: left;
   margin: 0.5rem 0;
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   font-weight: 300;
   color: #ecf0f1;
   font-family: 'Roboto', sans-serif;
@@ -65,10 +74,10 @@ align-items: center;
   align-items: center;
   text-align: center;
 
-  padding: 0 2rem;
+  padding: 0 1rem;
 
   flex-grow: 1;
-  font-size: 0.9rem;
+  font-size: 0.98rem;
   line-height: 1.4rem;
   margin: 0;
   font-weight:300;
@@ -94,7 +103,6 @@ align-items: center;
   align-items: center;
   padding: 0 2rem;
   width: auto;
-  min-height: 60px;
   height: 60px;
   cursor: pointer;
   transition: 0.3s ease;
@@ -111,6 +119,7 @@ align-items: center;
 
 .amenu-sub {
   display: none;
+  height: 40px;
   transition: 0.4s;
   background-color: rgba(44, 62, 80, 1.0);
   padding-left: 4rem;
@@ -153,18 +162,17 @@ article {
 }
 
 .article-title h1 {
+  max-width: 80%;
   text-align: center;
   text-overflow: ellipsis;
   margin: 2rem 0 0 0;
-  padding: 1rem 5rem;
-  padding-top: 5rem;
   font-size: 2.8rem;
   font-weight: 300;
   color: #ecf0f1;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 
   padding: 0.5rem 1rem;
-  border-radius: 5px;
+  border-radius: 3px;
   background-color: rgba(0, 0, 0, 0.2);
 
 } .article-title p{
@@ -173,9 +181,10 @@ article {
   color: #ecf0f1;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 
+  padding: 0.8rem;
   font-size: 1.2rem;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 3px;
   background-color: rgba(0, 0, 0, 0.2);
 
 }
@@ -246,13 +255,8 @@ article {
 
 /* LIST VIEW */
 
-.list-title h1 {
-  padding-top: 0;
-}
-
 .post-list-wrap {
   border-radius: 2px;
-  height: 100%;
   margin: 5rem 10%;
   background-color: white;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
@@ -275,7 +279,7 @@ article {
   align-items: center;
   height: 1rem;
   width: 1rem;
-  padding: 1.5rem;
+  padding: 2rem;
   margin: 0 2rem;
   border-radius: 50%;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
@@ -308,7 +312,6 @@ article {
   display: flex;
   align-items: center;
   text-align: center;
-  height: 100%;
   border-right: 1px solid rgba(52, 73, 94, 0.2);
   margin: 0;
   padding: 0 2rem;
@@ -348,6 +351,10 @@ article {
 }
 
 .prosqr-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
 
@@ -358,7 +365,7 @@ article {
   margin: 0.5rem;
   background-color: rgba(236, 240, 241, 0.5);
   border-radius: 50%;
-  transition: 0.2s ease;
+  transition: 0.5s ease;
 }.prosqr-img:hover{background-color: rgba(236, 240, 241, 1.0);}
 
 .prosqr-title {
@@ -496,12 +503,12 @@ transform: translateY(-2px);
     display: flex;
   }
   .article-title h1 {
-    padding: 1rem 2rem;
-    font-size: 2.2rem;
+    padding: 1rem 0.5rem;
+    font-size: 1.5rem;
   }
-  .meta * {
-    font-size: 1.2rem;
-    margin: 1rem 2rem;
+  .meta{width: 100%;}
+  .meta p {
+    font-size: 1.0rem;
   }
   .post-list-wrap {
     margin: 2rem 4%;

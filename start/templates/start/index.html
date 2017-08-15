@@ -18,10 +18,8 @@
   <div class="section section01">
     <div class="section01-content flexy">
       <div class="section01-content-box boxy-small">
+        <img src="{% static 'img/profile.jpg' %}" class="me-img noselect" draggable="false"></img>
         <div class="me">
-
-          <img src="{% static 'img/profile.jpg' %}" class="me-img noselect" draggable="false"></img>
-
           <div class="me-text">
             <h3>Hannes Hermansson</h3>
             <small>Maker / Programmer</small>
@@ -29,34 +27,35 @@
               I am a 17 year programmer and tinkerer who love anything to do with web development, AI/Machine learning and microcontrollers.
             </p>
           </div>
-
         </div>
       </div>
-      <div class="section01-content-box boxy">
-        <div class="hero">
+      <div class="hero">
 
+        <h2 class="hero-sub">Recent Posts<span class="content-dot hero-dot01" style="font-size:inherit !important; ">.</span></h2>
 
-          <div class="hero-list">
-            {% for i in posts %}
-            <a href="words/{{i.pk}}" class="prosqr">
-              <div class="prosqr-wrap">
-                <div class="cirfill"><i class="fa fa-paragraph fa-3x ciricon" aria-hidden="true"></i></div>
-                <h2 class="prosqr-title">{{i.title}}</h2>
-              </div>
-            </a>
-            {% endfor %}
-          </div>
+        <div class="hero-list artslider">
 
-          <div class="hero-list">
-            {% for i in pros %}
-            <a href="words/projects#{{i.pk}}" class="prosqr">
-              <div class="prosqr-wrap">
-                <img src="{{i.img}}" class="prosqr-img" alt="project screenshot" />
-                <h2 class="prosqr-title">{{i.title}}</h2>
-              </div>
-            </a>
-            {% endfor %}
-          </div>
+          {% for i in posts %}
+          <a href="words/{{i.pk}}" class="prosqr">
+            <div class="prosqr-wrap">
+              <div class="cirfill"><i class="fa fa-paragraph ciricon" aria-hidden="true"></i></div>
+              <h2 class="prosqr-title prosqr-title-solid ">{{i.title}}</h2>
+            </div>
+          </a>
+          {% endfor %}
+
+        </div>
+        <h2 class="hero-sub">Recent Projects<span class="content-dot hero-dot02" style="font-size:inherit !important; ">.</span></h2>
+        <div class="hero-list proslider">
+
+          {% for i in pros %}
+          <a href="words/projects#{{i.pk}}" class="prosqr">
+            <div class="prosqr-wrap">
+              <img src="{{i.img}}" class="prosqr-img" alt="project screenshot" />
+              <h2 class="prosqr-title prosqr-title-solid">{{i.title}}</h2>
+            </div>
+          </a>
+          {% endfor %}
 
         </div>
       </div>
@@ -135,4 +134,18 @@
       </div>
     </div>
   </div>
+  {% endblock %} {% block tail %}
+  <script>
+    $(document).ready(function() {
+      [$('.artslider'), $('.proslider')].forEach(function(item) {
+        item.slick({
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 4000,
+          variableWidth: true,
+        });
+      });
+    });
+  </script>
   {% endblock %}
