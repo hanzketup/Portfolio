@@ -36,10 +36,10 @@
         <div class="hero-list artslider">
 
           {% for i in posts %}
-          <a href="words/{{i.pk}}" class="prosqr prosqr-start">
-            <div class="prosqr-wrap">
-              <div class="cirfill"><i class="fa fa-paragraph ciricon" aria-hidden="true"></i></div>
-              <h2 class="prosqr-title prosqr-title-solid ">{{i.title}}</h2>
+          <a href="words/{{i.pk}}" class="prosqr-start">
+            <div class="startsqr">
+              <div class="cirfill startsqr-img"><i class="fa fa-pencil ciricon" aria-hidden="true"></i></div>
+              <h2 class="startsqr-title">{{i.title}}</h2>
             </div>
           </a>
           {% endfor %}
@@ -52,10 +52,10 @@
         <div class="hero-list proslider">
 
           {% for i in pros %}
-          <a href="words/projects#{{i.pk}}" class="prosqr prosqr-start">
-            <div class="prosqr-wrap">
-              <img src="{{i.img}}" class="prosqr-img" alt="project screenshot" />
-              <h2 class="prosqr-title prosqr-title-solid">{{i.title}}</h2>
+          <a href="words/projects#{{i.pk}}" class="prosqr-start">
+            <div class="startsqr">
+              <img src="{{i.img}}" class="startsqr-img" alt="project screenshot" />
+              <h2 class="startsqr-title">{{i.title}}</h2>
             </div>
           </a>
           {% endfor %}

@@ -200,8 +200,8 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 }
 
 .cirfill {
-  height: 12rem;
-  width: 12rem;
+  height:10rem;
+  width: 10rem;
   margin: 1rem;
   border-radius: 50%;
   transition: 0.2s ease;
@@ -214,6 +214,25 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 .ciricon {
   font-size: 3.2rem;
   color: rgba(236, 240, 241, 0.9);
+  transform: rotateZ(-45deg);
+  animation: 5s hvr-bob infinite;
+}
+
+@keyframes hvr-bob {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
 }
 
 .hero-list {
@@ -229,9 +248,77 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 }
 
 .prosqr-title-solid {
-  background-color: rgba(255, 255, 255, 0.8) !important;
+  background-color:none !important;
   width: 100%;
 }
+
+.prosqr-start{
+
+overflow: visible;
+
+display: flex;
+flex-direction: column;
+
+text-align: center;
+width: 16rem;
+height: 16rem;
+margin: 0 1rem;
+}
+
+.startsqr{
+
+position: relative;
+padding-top: 30%;
+border-radius: 6px;
+
+margin-top: 35%;
+
+background-color: white;
+overflow: visible;
+
+}
+
+.startsqr-title{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'roboto';
+  color: #333;
+  font-weight: 300;
+  box-sizing: content-box;
+  padding:1rem 0.4rem 1.5rem 0.4rem;
+  margin: 0;
+  font-size: 1.4rem;
+  height: 3rem;
+
+}
+
+.startsqr-img{
+
+z-index: 10;
+margin: 0 !important;
+
+height:10rem;
+width: 10rem;
+border-radius: 50%;
+
+position: absolute;
+top:-50%;
+left: 50%;
+transform: translateX(-50%);
+
+box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+
+}
+
+
+
+
+
+
+
 
 .hero-dot {
   display: inline;

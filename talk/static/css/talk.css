@@ -381,9 +381,11 @@ article {
   font-weight: 300;
   background-color: rgba(189, 195, 199, 0.2);
   border-radius: 4px;
-  padding: 0.6rem 0.4rem;
-  margin: 0.1rem 0;
+  box-sizing: content-box;
+  padding:0.2rem 0.4rem;
+  margin: 0;
   font-size: 1.4rem;
+  height: 3rem;
 }
 
 .prosqr-short {
