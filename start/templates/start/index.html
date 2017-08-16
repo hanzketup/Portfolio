@@ -7,7 +7,7 @@
   $(document).ready(function() {
     $('#fullpage').fullpage({
       anchors: ['intro', 'first', 'second', 'third', 'Fourth'],
-      responsiveWidth: 550
+      responsiveWidth: 550,
     });
   });
 </script>
@@ -31,12 +31,12 @@
       </div>
       <div class="hero">
 
+        <div class="hero-section">
         <h2 class="hero-sub">Recent Posts<span class="content-dot hero-dot01" style="font-size:inherit !important; ">.</span></h2>
-
         <div class="hero-list artslider">
 
           {% for i in posts %}
-          <a href="words/{{i.pk}}" class="prosqr">
+          <a href="words/{{i.pk}}" class="prosqr prosqr-start">
             <div class="prosqr-wrap">
               <div class="cirfill"><i class="fa fa-paragraph ciricon" aria-hidden="true"></i></div>
               <h2 class="prosqr-title prosqr-title-solid ">{{i.title}}</h2>
@@ -45,11 +45,14 @@
           {% endfor %}
 
         </div>
+      </div>
+
+        <div class="hero-section">
         <h2 class="hero-sub">Recent Projects<span class="content-dot hero-dot02" style="font-size:inherit !important; ">.</span></h2>
         <div class="hero-list proslider">
 
           {% for i in pros %}
-          <a href="words/projects#{{i.pk}}" class="prosqr">
+          <a href="words/projects#{{i.pk}}" class="prosqr prosqr-start">
             <div class="prosqr-wrap">
               <img src="{{i.img}}" class="prosqr-img" alt="project screenshot" />
               <h2 class="prosqr-title prosqr-title-solid">{{i.title}}</h2>
@@ -58,6 +61,7 @@
           {% endfor %}
 
         </div>
+      </div>
       </div>
     </div>
   </div>
@@ -144,6 +148,14 @@
           autoplay: true,
           autoplaySpeed: 4000,
           variableWidth: true,
+          responsive: [
+       {
+         breakpoint: 1208,
+         settings: {
+           slidesToShow: 1,
+         }
+       },
+     ],
         });
       });
     });
