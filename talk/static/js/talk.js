@@ -17,6 +17,8 @@ $(document).ready(function() {
     $(".fab"),
     $(".post-icon"),
     $(".pro-overlay-btn"),
+    $(".article-title h1"),
+    $(".article-title p"),
   ].forEach(function(item) {
     item.css("background-color", clr);
   });
@@ -58,24 +60,49 @@ $(document).ready(function() {
 
   //project section
 
-  $('.prosqr').on('click', function() {
+  (function() { // check if the url has a hash id
+    if (window.location.hash != "") {
+      hashpop();
+    }
+  }())
+
+
+  $('.prosqr').on('click', hashpop);
+
+  function hashpop() {
     setTimeout(function() {
+      console.log(window.location.hash);
+      var ovr = $(window.location.hash);
 
-      let ovr = $(window.location.hash);
+      if (ovr.length === 1) {
+        $(".pro-overlay-img").attr("src", ovr.data('img'));
+        $(".pro-overlay-title").text(ovr.data('title'));
+        $(".pro-overlay-desc").text(ovr.data('desc'));
 
-      $(".pro-overlay-img").attr("src", ovr.data('img'));
-      $(".pro-overlay-title").text(ovr.data('title'));
-      $(".pro-overlay-desc").text(ovr.data('desc'));
-      if(ovr.data('link') != ""){$(".pro-overlay-btn-link").attr("href", ovr.data('link'));$(".pro-overlay-btn-link").show();}
-      else{$(".pro-overlay-btn-link").hide();}
+        if (ovr.data('link') != "") {
+          $(".pro-overlay-btn-link").attr("href", ovr.data('link'));
+          $(".pro-overlay-btn-link").show();
+        } else {
+          $(".pro-overlay-btn-link").hide();
+          window.location.hash = "";
+        }
 
-      if(ovr.data('art') != ""){$(".pro-overlay-btn-more").attr("href", ovr.data('art'));$(".pro-overlay-btn-more").show();}
-      else{$(".pro-overlay-btn-more").hide();}
+        if (ovr.data('art') != "") {
+          $(".pro-overlay-btn-more").attr("href", ovr.data('art'));
+          $(".pro-overlay-btn-more").show();
+        } else {
+          $(".pro-overlay-btn-more").hide();
+          window.location.hash = "";
+        }
 
-      $('.pro-overlay').show(0);
+        $('.pro-overlay').show(0);
+
+      } else {
+        console.log("not an id");
+      }
+
     }, 25);
-
-  });
+  }
 
   $('.pro-overlay-x').on('click', function() {
     $('.pro-overlay').hide();
