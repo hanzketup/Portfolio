@@ -71,33 +71,9 @@ position: absolute;
  transform: translate(-50%, -50%);
 }
 
-
-.lytro-wrap{
-
-display: flex;
-justify-content: center;
-align-items: center;
-
-margin: 5vw;
-
-}.lytro{
-
-height: 42vw;
-width: 60vw;
-
-}
-
-
 @media screen and (max-width:800px) {
   .pho-overlay-box {
     width: 90%;
-  }
-  .lytro-wrap{margin: 0;}
-  .lytro{
-
-  height: 75vw;
-  width: 100vw;
-
   }
 }
 
