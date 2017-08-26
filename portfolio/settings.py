@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'rxj9=^x-a0oi4+$3i0p5gt%sggk(^xg=v!5clg$_4xf^1ucaj%dabonthemhate'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -142,7 +142,6 @@ PIPELINE_CSSMIN_BINARY = 'cssmin'
 PIPELINE_JS_COMPRESSOR = 'pipeline.compressors.slimit.SlimItCompressor'
 
 PIPELINE = {
-	'PIPELINE_ENABLED':True,    
 	'STYLESHEETS': {
 	'global': {
             'source_filenames': (
