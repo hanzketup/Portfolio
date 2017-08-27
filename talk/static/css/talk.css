@@ -51,9 +51,9 @@ aside {
 
 .talk-me-img {
   width: 8rem;
-  height:8rem;
+  height: 8rem;
   margin: 0.4rem 0;
-  border:7px solid #34495e;
+  border: 7px solid #34495e;
   border-radius: 50%;
 }
 
@@ -163,25 +163,14 @@ article {
   text-align: center;
   text-overflow: ellipsis;
   margin: 2rem 0 0 0;
-  font-size: 2.8rem;
+  font-size: 2.4rem;
   font-weight: 300;
   color: #ecf0f1;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  padding: 0.5rem 1rem;
-  border-radius: 3px;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.article-title p {
-  font-weight: 300;
-  color: #ecf0f1;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  padding: 0.8rem;
-  margin: 1.1rem;
-  font-size: 1.2rem;
-  text-align: center;
-  border-radius: 3px;
-  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  border: 6px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 0px rgba(0,0,0,0.1);
 }
 
 .back {
@@ -205,12 +194,28 @@ article {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
+.list-title p{
+  color: #ecf0f1;
+  border: 6px solid rgba(0, 0, 0, 0.1);
+  margin: 2rem 0 0 0;
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  text-align: center;
+  line-height: 140%;
+  font-weight: 300;
+  box-shadow: 3px 3px 0px rgba(0,0,0,0.1);
+}
+
 .cat, .pub {
   color: #ecf0f1;
-  background-color: rgba(0, 0, 0, 0.2);
+  border: 6px solid rgba(0, 0, 0, 0.1);
   margin: 2rem 0 0 0;
   padding: 0.1rem 1rem;
-  border-radius: 4px;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -219,6 +224,7 @@ article {
   text-align: center;
   line-height: 140%;
   font-weight: 300;
+  box-shadow: 3px 3px 0px rgba(0,0,0,0.1);
 }
 
 .fab {
@@ -229,7 +235,7 @@ article {
   display: none;
   justify-content: center;
   align-items: center;
-  height:4rem;
+  height: 4rem;
   width: 4rem;
   font-size: 0.8rem;
   padding: 0.8rem;
@@ -275,7 +281,7 @@ article {
   display: flex;
   justify-content: center;
   align-items: center;
-  height:3rem;
+  height: 3rem;
   width: 3rem;
   padding: 2rem;
   margin: 0 2rem;
@@ -335,7 +341,6 @@ article {
   margin: 5rem 10%;
   padding: 2%;
   border-radius: 2px;
-  background-color: white;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -381,7 +386,7 @@ article {
   background-color: rgba(189, 195, 199, 0.2);
   border-radius: 4px;
   box-sizing: content-box;
-  padding:0.2rem 0.4rem;
+  padding: 0.2rem 0.4rem;
   margin: 0;
   font-size: 1.4rem;
   height: 3rem;
@@ -576,7 +581,7 @@ article {
   .prosqr {
     width: 100%;
   }
-  .prosqr-start {
+  .prosqr-wrap {
     width: 16rem;
   }
 }

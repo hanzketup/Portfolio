@@ -1,6 +1,6 @@
 "use strict";
 
-$(document).ready(function () {
+$(document).ready(function rdy() {
 
   var clrarr = ["#f1c40f", //yellow
   "#1abc9c", //turq
@@ -12,7 +12,7 @@ $(document).ready(function () {
 
   var clr = clrarr[Math.floor(Math.random() * clrarr.length)];
 
-  var reclr = [$(".article-title"), $(".fab"), $(".post-icon"), $(".pro-overlay-btn")].forEach(function (item) {
+  var reclr = [$(".article-title"), $(".fab"), $(".post-icon"), $(".pro-overlay-btn"), $(".meta *"), $(".article-title h1"), $(".list-title p")].forEach(function (item) {
     item.css("background-color", clr);
   });
 
