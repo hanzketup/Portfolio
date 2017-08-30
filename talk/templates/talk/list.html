@@ -7,20 +7,14 @@
   <h1>{{title}}</h1>
 </div>
 
-<div class="post-list-wrap">
-{% for i in posts %}
-<a href="/words/{{i.pk}}" class="post-list">
-<div class="post-icon"><i class="fa fa-pencil" aria-hidden="true"></i></div>
-<div class="post-main">
-<h1 class="post-title">{{i.title}}</h1>
-<p class="post-short">{{i.short}}</p>
+<div class="pro-wrap">
+  {% for i in posts %}
+  <a href="words/{{i.pk}}" class="sqr-wrap">
+    <div class="sqr">
+      <div class="cirfill sqr-img"><i class="fa fa-pencil ciricon" aria-hidden="true"></i></div>
+      <h2 class="sqr-title">{{i.title}}</h2>
+    </div>
+  </a>
+  {% endfor %}
 </div>
-<div class="post-meta">
-<p>Published On:<br>{{i.date}}</p>
-<p>In Category:<br>{{i.cat.all.0}}</p>
-</div>
-</a>
-{% endfor %}
-</div>
-
 {% endblock %}

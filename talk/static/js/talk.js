@@ -12,7 +12,7 @@ $(document).ready(function rdy() {
 
   var clr = clrarr[Math.floor(Math.random() * clrarr.length)];
 
-  var reclr = [$(".article-title"), $(".fab"), $(".post-icon"), $(".pro-overlay-btn"), $(".meta *"), $(".article-title h1"), $(".list-title p")].forEach(function (item) {
+  var reclr = [$(".article-title"), $(".fab"), $(".post-icon"), $(".pro-overlay-btn")].forEach(function (item) {
     item.css("background-color", clr);
   });
 

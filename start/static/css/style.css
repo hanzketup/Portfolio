@@ -147,6 +147,8 @@ a:hover {
   font-weight: lighter;
 }
 
+.section{min-height: 100vh;}
+
 .section01-content {
   width: 100%;
   display: flex;
@@ -194,6 +196,7 @@ a:hover {
 }
 
 .hero-list {
+  display: flex;
   width: 45vw;
   padding: 0;
 }
@@ -236,6 +239,8 @@ overflow: visible;
 box-shadow: 3px 3px 2px rgba(0,0,0,0.05);
 
 }
+
+
 
 .sqr-title{
 
@@ -521,6 +526,10 @@ background-position: 0 0;
   }
   .foot-sep{display:none;}
   .footer-btn{margin: 1rem;}
+
+  .pro-wrap{margin: 1rem !important;}
+  .pro-wrap > *{width: 95%;margin-bottom: 2rem;}
+
 }
 
 /* 404 styles */
@@ -560,4 +569,5 @@ animation: neon 1.5s ease-in-out infinite alternate;
   to {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
   }
+
 }
