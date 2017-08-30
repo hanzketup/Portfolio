@@ -268,147 +268,15 @@ article {
 
 /* LIST VIEW */
 
-.post-list-wrap {
-  border-radius: 2px;
-  margin: 5rem 10%;
-  background-color: white;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-}
+  .sqr-list{
 
-.post-list {
-  font-family: 'Roboto', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 8rem;
-  color: #333;
-  border-bottom: 1px solid rgba(52, 73, 94, 0.2);
-}
+    padding: 4vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 
-.post-icon {
-  font-size: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 3rem;
-  width: 3rem;
-  padding: 2rem;
-  margin: 0 2rem;
-  border-radius: 50%;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-}
-
-.post-icon i {
-  color: white;
-}
-
-.post-main {
-  flex: 10;
-  flex-grow: 1;
-}
-
-.post-title {
-  font-weight: 300;
-  margin: 0;
-}
-
-.post-short {
-  font-weight: 300;
-  padding: 0 4rem 0 0;
-}
-
-.post-meta {
-  height: 100%;
-  line-height: 160%;
-  display: flex;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.post-meta p {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  border-right: 1px solid rgba(52, 73, 94, 0.2);
-  margin: 0;
-  padding: 0 2rem;
-}
-
-.post-meta p:first-child {
-  border-left: 1px solid rgba(52, 73, 94, 0.2);
-}
-
-.post-meta p:last-child {
-  border-right: none;
-}
-
-
-/* Project listing */
-
-.pro-wrap {
-  color: #333;
-  margin: 5rem 10%;
-  padding: 2%;
-  border-radius: 2px;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.prosqr {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-  width: 16rem;
-  height: 20rem;
-  margin: 0 1rem;
-}
-
-.prosqr-wrap {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.prosqr-img {
-  height: 12rem;
-  width: 12rem;
-  padding: 0.5rem;
-  margin: 0.5rem;
-  background-color: rgba(236, 240, 241, 0.5);
-  border-radius: 50%;
-  transition: 0.5s ease;
-}
-
-.prosqr-img:hover {
-  background-color: rgba(236, 240, 241, 1.0);
-}
-
-.prosqr-title {
-  font-family: 'roboto';
-  color: #333;
-  font-weight: 300;
-  background-color: rgba(189, 195, 199, 0.2);
-  border-radius: 4px;
-  box-sizing: content-box;
-  padding: 0.2rem 0.4rem;
-  margin: 0;
-  font-size: 1.4rem;
-  height: 3rem;
-}
-
-.prosqr-short {
-  margin: 0 2rem;
-  width: 14rem;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  margin: 0;
-}
-
+  }
 
 /* project overlay */
 
@@ -420,6 +288,7 @@ article {
   right: 0;
   left: 14rem;
   background-color: rgba(0, 0, 0, 0.2);
+  z-index: 100;
 }
 
 .pro-overlay-wrap {
@@ -581,9 +450,6 @@ article {
 }
 
 @media screen and (max-width:400px) {
-  .pro-wrap {
-    margin: 1rem;
-  }
   .list-title p {
     width: 80%;
   }
