@@ -8,5 +8,7 @@ urlpatterns = [
     url('(?P<cat>\w+)/$', views.catlist),
     url('^projects$', views.listproject),
     url('^experiments$', views.listexp),
+    url('^contact$', views.contact),
+
 
 ]

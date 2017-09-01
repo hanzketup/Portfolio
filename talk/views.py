@@ -88,3 +88,34 @@ def catlist(request, cat):
         }
 
         return render(request, 'talk/list.html', snd)
+
+
+
+def contact(request):
+    snd = {
+
+        "title": "contact",
+        "allcat": getcat(),
+    }
+
+    return render(request, 'talk/contact.html', snd)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

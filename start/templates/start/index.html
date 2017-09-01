@@ -6,7 +6,7 @@
 <script>
   $(document).ready(function() {
     $('#fullpage').fullpage({
-      anchors: ['intro', 'first', 'second', 'third', 'Fourth'],
+      anchors: ['intro', 'first', 'second', 'third', 'end'],
       responsiveWidth: 550,
     });
   });
@@ -36,7 +36,7 @@
         <div class="hero-list artslider">
 
           {% for i in posts %}
-          <a href="words/{{i.pk}}" class="sqr-wrap">
+          <a href="words/{{i.pk}}" class="sqr-wrap index-sqr">
             <div class="sqr">
               <div class="cirfill sqr-img"><i class="fa fa-pencil ciricon" aria-hidden="true"></i></div>
               <h2 class="sqr-title">{{i.title}}</h2>
@@ -52,7 +52,7 @@
         <div class="hero-list proslider">
 
           {% for i in pros %}
-          <a href="words/projects#{{i.pk}}" class="sqr-wrap">
+          <a href="words/projects#{{i.pk}}" class="sqr-wrap index-sqr">
             <div class="sqr">
               <img src="{{i.img}}" class="sqr-img" alt="project screenshot" />
               <h2 class="sqr-title">{{i.title}}</h2>
@@ -128,10 +128,10 @@
           <h1 class="content-headline">The end</h1>
           <h1 class="content-dot  hero-dot01 footer-dot">.</h1>
 
-          <p class="section-intro">You have reached the end! Need a hand with your next project?<br> Contact me by clicking the blue button or hire me by clicking the green button!</p>
+          <p class="section-intro">You have reached the end! Need a hand with your next project?<br> Contact me by clicking the blue button or hire me on Upwork by clicking the green button!</p>
 
           <div class="footer-menu">
-            <a href="#" class="footer-btn footer-contact">Contact</a>
+            <a href="/words/contact" class="footer-btn footer-contact">Contact</a>
             <p class="foot-sep">||</p>
             <a href="https://www.upwork.com/o/profiles/users/_~01a2afee99d944b339/" target="_blank" class="footer-btn footer-hire">Hire me!</a>
           </div>

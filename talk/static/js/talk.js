@@ -2,17 +2,17 @@
 
 $(document).ready(function rdy() {
 
-  var clrarr = ["#f1c40f", //yellow
+  var clrarr = [
   "#1abc9c", //turq
   "#3498db", //blue
   "#27ae60", //green
   "#e74c3c", //red
   "#9b59b6", //purple
-  "#795548"];
+];
 
   var clr = clrarr[Math.floor(Math.random() * clrarr.length)];
 
-  var reclr = [$(".article-title"), $(".fab"), $(".post-icon"), $(".pro-overlay-btn")].forEach(function (item) {
+  var reclr = [$(".article-title"), $(".fab"), $(".post-icon"), $(".pro-overlay-btn"), $(".meta"), $(".article-title h1"), $(".list-title p")].forEach(function (item) {
     item.css("background-color", clr);
   });
 
