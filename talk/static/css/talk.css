@@ -1,5 +1,5 @@
 .wrap {
-  min-height: 100%;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -242,7 +242,7 @@ transform: scale(1.2);
 .fab {
   z-index: 1000;
   position: fixed;
-  bottom: 2vh;
+  bottom:2vh;
   right: 4vw;
   display: none;
   justify-content: center;
@@ -254,6 +254,7 @@ transform: scale(1.2);
   border-radius: 50%;
   color: rgba(236, 240, 241,0.95);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  transition: 2s ease;
 }
 
 .article-block {
@@ -266,14 +267,14 @@ transform: scale(1.2);
 
   width: 100%;
   min-height: 60%;
-  margin: 2% 0%;
+  margin:0;
 }
 
 .article-content{
 
 width: 80%;
 min-height: 50vh;
-padding: 4rem 8rem;
+padding: 10vh 5vw;
 
 display: flex;
 flex-direction: column;
@@ -423,6 +424,7 @@ padding: 4rem 6rem;
 border-radius: 8px;
 background-color: white;
 
+text-align: center;
 font-size: 2rem;
 
 

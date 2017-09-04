@@ -99,23 +99,3 @@ def contact(request):
     }
 
     return render(request, 'talk/contact.html', snd)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
