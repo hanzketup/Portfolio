@@ -2,26 +2,23 @@
 
 $(document).ready(function rdy() {
 
-  var clrarr = [
-  "#1abc9c", //turq
+  var clrarr = ["#1abc9c", //turq
   "#3498db", //blue
   "#27ae60", //green
   "#e74c3c", //red
-  "#9b59b6", //purple
-];
+  "#9b59b6"];
 
-let jumbo = document.getElementsByClassName('article-title')[0]
+  var jumbo = document.getElementsByClassName('article-title')[0];
 
-var pattern = Trianglify({
-  height: jumbo.clientHeight,
-  width: jumbo.clientWidth + 600,
-  variance: "0.99",
-  x_colors: 'Paired',
-  cell_size: 70,
-});
+  var pattern = Trianglify({
+    height: jumbo.clientHeight,
+    width: jumbo.clientWidth + 600,
+    variance: "0.99",
+    x_colors: 'Paired',
+    cell_size: 70
+  });
 
-jumbo.style['background-image'] = 'url(' + pattern.png() + ')';
-
+  jumbo.style['background-image'] = 'url(' + pattern.png() + ')';
 
   var clr = clrarr[Math.floor(Math.random() * clrarr.length)];
 

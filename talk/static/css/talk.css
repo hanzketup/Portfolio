@@ -1,5 +1,5 @@
 .wrap {
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -232,7 +232,7 @@ transform: scale(1.2);
 }
 
 .sep {
-  color: rgba(0,0,0,0.2);
+  color: rgba(0,0,0,0.4);
   font-size: 1.8rem;
   font-weight: 500;
   padding: 0 1rem;
@@ -273,7 +273,7 @@ transform: scale(1.2);
 
 width: 80%;
 min-height: 50vh;
-padding: 2rem 8rem;
+padding: 4rem 8rem;
 
 display: flex;
 flex-direction: column;
