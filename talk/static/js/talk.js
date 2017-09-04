@@ -10,9 +10,22 @@ $(document).ready(function rdy() {
   "#9b59b6", //purple
 ];
 
+let jumbo = document.getElementsByClassName('article-title')[0]
+
+var pattern = Trianglify({
+  height: jumbo.clientHeight,
+  width: jumbo.clientWidth + 600,
+  variance: "0.99",
+  x_colors: 'Paired',
+  cell_size: 70,
+});
+
+jumbo.style['background-image'] = 'url(' + pattern.png() + ')';
+
+
   var clr = clrarr[Math.floor(Math.random() * clrarr.length)];
 
-  var reclr = [$(".article-title"), $(".fab"), $(".post-icon"), $(".pro-overlay-btn"), $(".meta"), $(".article-title h1"), $(".list-title p")].forEach(function (item) {
+  var reclr = [$(".fab"), $(".post-icon"), $(".pro-overlay-btn")].forEach(function (item) {
     item.css("background-color", clr);
   });
 

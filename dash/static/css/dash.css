@@ -1,0 +1,147 @@
+
+/* General rule */
+
+.dashsqrlist{
+
+width: 80%;
+height: 100%;
+
+}
+
+.dashplus{
+
+position: absolute;
+
+top:  1rem;
+right:1rem;
+
+transition: 0.4s ease;
+
+color:#bdc3c7;
+text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+
+}.dashplus:hover{color:#1abc9c;}
+
+.dash-wrap{
+
+min-height: 100vh;
+
+}
+
+.dash-menu{
+
+width: 100%;
+min-height: 4rem;
+
+display: flex;
+justify-content: space-around;
+align-items: center;
+flex-wrap: wrap;
+
+background-color: #1abc9c;
+
+}
+
+.dash-menu a,
+.dash-menu i,
+.dash-menu p{
+
+font-size: 1.3rem;
+font-weight: 300;
+color:white;
+font-family: 'Roboto', sans-serif;
+cursor: pointer;
+
+}
+
+.dash-menu i{
+padding: 0 1rem;
+}
+
+
+
+.dash-content{
+
+display: flex;
+justify-content:center;
+align-items: center;
+flex-direction: column;
+
+position: absolute;
+
+width: 100%;
+min-height: 93vh;
+background-color: #ecf0f1;
+font-family: 'Roboto', sans-serif;
+
+}
+
+/* DashArticle */
+
+.dash-content form{
+
+display: flex;
+align-items: center;
+flex-direction: column;
+
+height:100%;
+width: 60%;
+
+}
+
+.dashtitle{
+
+width: 90%;
+margin: 2rem;
+padding: 0.8rem 1rem;
+font-size: 1.5rem;
+color:#333;
+background-color: white;
+border: 1px solid grey;
+border-radius:6px;
+
+}
+
+#dashTxt{
+
+}
+
+.dashtail{
+
+width: 100%;
+margin: 2rem 0;
+display: flex;
+justify-content: space-around;
+align-items: center;
+
+}
+
+.dashcat, .dashbtn{
+
+  padding: 1.2rem 2.5rem;
+
+  font-size: 1.4rem;
+  color:#333;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius:6px;
+
+}
+
+.dashbtn{
+
+color:white;
+background-color: #1abc9c;
+transition: 0.2s ease;
+
+}.dashbtn:hover{background-color:#16a085;}
+
+@media screen and (max-width:1000px){
+  .dash-content form{width: 100%;}
+  .dashtitle{font-size: 1.0rem;}
+
+}
+
+@media screen and (max-width:700px){
+  .dash-menu{flex-direction: column;}
+}

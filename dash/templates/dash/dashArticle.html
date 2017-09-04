@@ -1,0 +1,63 @@
+{% extends 'dash/dashBase.html' %}
+{% block title %}{{title}}{% endblock %}
+{% block article %}
+
+<form class="editorstyle" method="post" action="">
+{% csrf_token %}
+
+<input class="dashtitle" name="title" value="{{titleval}}" placeholder="Article title"></input>
+
+<input name="pk" value="{{pk}}" style="display:none;"></input>
+
+<textarea id="dashTxt" name="content">
+</textarea>
+
+<div class="dashtail">
+
+<select class="dashcat" name="cat">
+  {% for i in cat %}
+  <option value="{{i.pk}}">{{i.title}}</option>
+  {% endfor %}
+</select>
+
+<button class="dashbtn" type="submit">Submit</button>
+
+</div>
+
+</form>
+
+<div class="content" style="display:none;">{{ content|safe }}</div>
+
+{% endblock %}
+{% block tail %}
+
+<script src="https://cdn.jsdelivr.net/npm/tinymce@4.6.6/tinymce.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tinymce@4.6.6/jquery.tinymce.min.js"></script>
+
+<script>
+  tinymce.init({
+    selector: 'textarea',
+    height: 500,
+    menubar: false,
+    contextmenu: false,
+    browser_spellcheck : true,
+    body_class: 'editorstyle',
+    content_style: ".article-block h1,.editorstyle h1{font-size:40px;color:rgba(0,0,0,.8);margin:.2rem 0}.article-block h2,.editorstyle h2{font-size:1.8rem;color:rgba(0,0,0,.44);margin:.8rem 0}.article-block p,.editorstyle p{color:#333;font-size:21px}.article-block hr,.editorstyle hr{color:rgba(189,195,199,.4);width:100%}", 
+    setup: function(ed){
+      ed.on("init",
+      function(ed) {
+      tinyMCE.editors[0].setContent($('.content').html());
+      tinyMCE.execCommand('mceRepaint');
+    });},
+    plugins: [
+      'advlist autolink lists link image charmap print preview hr anchor pagebreak ',
+  'searchreplace wordcount visualblocks visualchars code fullscreen ',
+  'insertdatetime media nonbreaking save table directionality',
+  'template paste textcolor colorpicker textpattern imagetools codesample toc help emoticons hr'
+    ],
+    toolbar: 'insert | undo redo |  styleselect | bold italic backcolor  | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat visualblocks | fullscreen help',
+    content_css: []
+  });
+</script>
+
+{% endblock %}

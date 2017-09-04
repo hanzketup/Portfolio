@@ -1,0 +1,32 @@
+{% extends "start/core.html" %}
+{% load staticfiles %}
+{% block title %}Dashboard{% endblock %}
+{% block head %}
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,500,700" rel="stylesheet">
+  {% endblock %}
+{% block content %}
+
+<div class="dash-wrap">
+<div class="dash-menu">
+
+<a href="/" target="_blank">(╯°□°）╯︵ ┻━┻</a>
+
+<div>
+  <a href="/dashboard">Home</a>
+  <i>/</i>
+  <a href="/dashboard/articles">Articles</a>
+  <i>/</i>
+  <a href="/dashboard/logout">Log out</a>
+</div>
+
+<p>Hello {{request.user}}</p>
+
+</div>
+
+<div class="dash-content">
+{% block article %}
+
+{% endblock %}
+</div>
+</div>
+  {% endblock %}

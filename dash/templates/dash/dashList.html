@@ -1,0 +1,21 @@
+{% extends 'dash/dashBase.html' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block article %}
+
+<div class="sqr-list dashsqrlist">
+  <a class="dashplus" href="/dashboard/articles/new"><i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i></a>
+  {% for i in posts %}
+  <a href="/dashboard/articles/{{i.pk}}" class="sqr-wrap">
+    <div class="sqr">
+      <div class="cirfill sqr-img"><i class="fa fa-pencil ciricon" aria-hidden="true"></i></div>
+      <h2 class="sqr-title">{{i.title}}</h2>
+    </div>
+  </a>
+
+  {% empty %}
+  <h1 class="empty">Nothing here right now...</h1>
+  {% endfor %}
+</div>
+{% endblock %}

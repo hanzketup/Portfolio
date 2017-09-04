@@ -217,13 +217,16 @@ a:hover {
 
 overflow: visible;
 
+flex-basis: 25%;
+
 display: flex;
 flex-direction: column;
+justify-content: center;
+align-items: center;
 
 text-align: center;
-width: 16rem;
 height: 16rem;
-margin: 0;
+margin: 1rem 0;
 }
 
 .sqr{
@@ -231,6 +234,8 @@ margin: 0;
 position: relative;
 padding-top: 30%;
 border-radius: 6px;
+
+width: 16rem;
 
 margin-top: 35%;
 
@@ -568,7 +573,14 @@ background-position: 0 0;
       width:10rem;
       height: 10rem;
       margin: 0.5rem 0;
-  }.sqr-wrap .cirfill, .sqr-wrap .sqr-img{
+  }
+
+  .sqr{
+    width:10rem;
+    height: 10rem;
+  }
+
+  .sqr-wrap .cirfill, .sqr-wrap .sqr-img{
 
     width: 6rem;
     height:6rem;

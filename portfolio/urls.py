@@ -21,5 +21,5 @@ urlpatterns = [
     url(r'^' , include('start.urls')),
     url(r'^words/', include('talk.urls')),
     url(r'^photos/', include('photos.urls')),
-
+    url(r'^dashboard/', include('dash.urls')),
 ]
